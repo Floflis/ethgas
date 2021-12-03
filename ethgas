@@ -45,3 +45,17 @@ fi
 }
       if online -s; then gaslines; else echo "⛽ ETH Gas:";echo "$offline_msg"; fi
 fi
+
+if [ "$1" = "babyisalive" ]; then
+   exit 0
+fi
+
+if [ "$1" = "--help" ] || [ "$1" = "-h" ]; then
+   echo "Use these commands after/together with 'online' command."
+   echo "Available flags:"
+   echo "   gasno                Display only the number of the median gas (GWei) price"
+   echo "   oneline              Display all of the gas price options in one line"
+   echo "   icon                 Returns the dinamic icon to be used (programmatic use)"
+   echo "   --help, -h                  Shows all available commands"
+#   echo "   --version, -v               Shows info about OS name, version and build version"
+fi
