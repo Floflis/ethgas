@@ -17,7 +17,7 @@ if [ "$1" != "" ]
         if online -s; then echo ${fastgasformat%%,*}; else echo "OFF"; fi
 fi
      if [ "$1" = "icon" ];then
-        echo "/home/daniell/Desktop/gas-pump.svg"
+        echo "/usr/lib/ethgas/gas-pump.svg"
 fi
      if [ "$1" = "oneline" ];then
         if online -s; then echo "🚀 Rapid: ${rapidgasformat%%,*} | ✈ Fast: ${fastgasformat%%,*} | 🚗 Standard: ${standardgasformat%%,*} | 🛵 Slow: ${slowgasformat%%,*}"; else echo "❌ $offline_msg"; fi

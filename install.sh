@@ -4,6 +4,10 @@ echo "Installing ethgas..."
 
 sudo cp -f ethgas /usr/bin/ethgas
 
+sudo mkdir /usr/lib/ethgas
+sudo cp -f gas-pump.svg /usr/lib/ethgas/gas-pump.svg
+sudo cp -f gas-pump-symbolic.svg /usr/share/icons/hicolor/scalable/status/gas-pump-symbolic.svg
+
 installfail(){
    echo "Installation has failed."
    exit 1
