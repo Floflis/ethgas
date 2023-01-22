@@ -2,12 +2,12 @@
 
 offline_msg="You are offline."
 
-rapidgasget=$(curl -s https://etherchain.org/api/gasnow | jq -r '.data.rapid');rapidgasformat=$(printf "%'d" $rapidgasget)
-fastgasget=$(curl -s https://etherchain.org/api/gasnow | jq -r '.data.fast');fastgasformat=$(printf "%'d" $fastgasget)
-standardgasget=$(curl -s https://etherchain.org/api/gasnow | jq -r '.data.standard');standardgasformat=$(printf "%'d" $standardgasget)
-slowgasget=$(curl -s https://etherchain.org/api/gasnow | jq -r '.data.slow');slowgasformat=$(printf "%'d" $slowgasget)
+rapidgasget=$(curl -s https://beaconcha.in/api/v1/execution/gasnow | jq -r '.data.rapid');rapidgasformat=$(printf "%'d" $rapidgasget)
+fastgasget=$(curl -s https://beaconcha.in/api/v1/execution/gasnow | jq -r '.data.fast');fastgasformat=$(printf "%'d" $fastgasget)
+standardgasget=$(curl -s https://beaconcha.in/api/v1/execution/gasnow | jq -r '.data.standard');standardgasformat=$(printf "%'d" $standardgasget)
+slowgasget=$(curl -s https://beaconcha.in/api/v1/execution/gasnow | jq -r '.data.slow');slowgasformat=$(printf "%'d" $slowgasget)
 
-#ethprice=$(curl -s https://etherchain.org/api/gasnow | jq -r '.data.priceUSD')
+#ethprice=$(curl -s https://beaconcha.in/api/v1/execution/gasnow | jq -r '.data.priceUSD')
 #rapidgas_toeth=$(echo "0.1 0.1" | awk '{printf "%.18f\n", $rapidgasget / 1000000000000000000}')
 #rapidgas_cost=$(echo "$value + $value"|bc)
 
