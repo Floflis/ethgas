@@ -1,0 +1,9 @@
+{
+    "uuid": "ethgas-desklet@floflis",
+    "name": "ETH Gas",
+    "version": "1.0",
+    "description": "Get updated information about Ethereum's gas prices right from your taskbar",
+    "contributors": "Daniella Mesquita",
+    "prevent-decorations": true,
+    "author": "Floflis DAO"
+}

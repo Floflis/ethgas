@@ -1,0 +1,3 @@
+desklet.js
+settings-schema.json
+stylesheet.css
