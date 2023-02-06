@@ -1,0 +1,5 @@
+- Convert decimal points (but leave option flag to use decimals)
+
+- rework gas-pump-symbolic.svg, based in /usr/share/icons/Yaru/scalable/phosh/phone-docked-symbolic.svg
+
+- replace gas-pump to its symbolic version and install it in hicolor instead of lib
