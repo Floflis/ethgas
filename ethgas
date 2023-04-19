@@ -2,10 +2,11 @@
 
 offline_msg="You are offline."
 
-rapidgasget=$(curl -s https://beaconcha.in/api/v1/execution/gasnow | jq -r '.data.rapid');rapidgasformat=$(printf "%'d" $rapidgasget)
-fastgasget=$(curl -s https://beaconcha.in/api/v1/execution/gasnow | jq -r '.data.fast');fastgasformat=$(printf "%'d" $fastgasget)
-standardgasget=$(curl -s https://beaconcha.in/api/v1/execution/gasnow | jq -r '.data.standard');standardgasformat=$(printf "%'d" $standardgasget)
-slowgasget=$(curl -s https://beaconcha.in/api/v1/execution/gasnow | jq -r '.data.slow');slowgasformat=$(printf "%'d" $slowgasget)
+rapidgasget=$(curl -s https://beaconcha.in/api/v1/execution/gasnow | jq -r '.data.rapid' | cut -c1-2);rapidgasformat=$(printf "%'d" $rapidgasget)
+fastgasget=$(curl -s https://beaconcha.in/api/v1/execution/gasnow | jq -r '.data.fast' | cut -c1-2);fastgasformat=$(printf "%'d" $fastgasget)
+standardgasget=$(curl -s https://beaconcha.in/api/v1/execution/gasnow | jq -r '.data.standard' | cut -c1-2);standardgasformat=$(printf "%'d" $standardgasget)
+slowgasget=$(curl -s https://beaconcha.in/api/v1/execution/gasnow | jq -r '.data.slow' | cut -c1-2);slowgasformat=$(printf "%'d" $slowgasget)
+#"cut", from https://stackoverflow.com/a/1405641
 
 #ethprice=$(curl -s https://beaconcha.in/api/v1/execution/gasnow | jq -r '.data.priceUSD')
 #rapidgas_toeth=$(echo "0.1 0.1" | awk '{printf "%.18f\n", $rapidgasget / 1000000000000000000}')
